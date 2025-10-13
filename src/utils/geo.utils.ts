@@ -27,3 +27,17 @@ export const calculateBearing = (start: RoutePoint, end: RoutePoint) => {
 
   return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
 };
+
+// Linear interpolate between two angles (degrees), shortest path
+export const lerpAngle = (a: number = 0, b: number = 0, t: number) => {
+  let diff = (b - a + 540) % 360 - 180; // shortest signed difference
+  return (a + diff * t + 360) % 360;
+};
+
+// Interpolate between two points
+export const interpolatePoint = (start: RoutePoint, end: RoutePoint, fraction: number): RoutePoint => ({
+  latitude: start.latitude + (end.latitude - start.latitude) * fraction,
+  longitude: start.longitude + (end.longitude - start.longitude) * fraction,
+  speed: start.speed,
+  streetName: start.streetName,
+});
