@@ -16,53 +16,53 @@ export interface RouteItem {
 const mockRoutes: RouteItem[] = [
   {
     id: '1',
-    startLocation: 'Mission & 16th St, San Francisco',
-    endLocation: 'Market & 5th St, Downtown SF',
-    startCoords: { lat: 37.7647, lng: -122.4192 },
-    endCoords: { lat: 37.7757, lng: -122.4194 },
+    startLocation: 'AWR Office, Business Bay, Dubai',
+    endLocation: 'Burj Khalifa, Downtown Dubai',
+    startCoords: { lat: 25.1879, lng: 55.2744 },
+    endCoords: { lat: 25.1972, lng: 55.2744 },
     liveTrackingAvailable: true,
-    distance: '2.5 km',
-    estimatedTime: '8 min'
+    distance: '1.2 km',
+    estimatedTime: '4 min'
   },
   {
     id: '2',
-    startLocation: 'Golden Gate Park, SF',
-    endLocation: 'Fisherman\'s Wharf, SF',
-    startCoords: { lat: 37.7694, lng: -122.4862 },
-    endCoords: { lat: 37.8080, lng: -122.4177 },
+    startLocation: 'Dubai Mall, Downtown',
+    endLocation: 'Mall of the Emirates',
+    startCoords: { lat: 25.1972, lng: 55.2796 },
+    endCoords: { lat: 25.1181, lng: 55.2008 },
     liveTrackingAvailable: false,
-    distance: '6.2 km',
-    estimatedTime: '15 min'
+    distance: '12.5 km',
+    estimatedTime: '18 min'
   },
   {
     id: '3',
-    startLocation: 'SFO Airport Terminal 1',
-    endLocation: 'Union Square, SF',
-    startCoords: { lat: 37.6213, lng: -122.3790 },
-    endCoords: { lat: 37.7880, lng: -122.4074 },
+    startLocation: 'Dubai International Airport',
+    endLocation: 'Palm Jumeirah',
+    startCoords: { lat: 25.2532, lng: 55.3657 },
+    endCoords: { lat: 25.1124, lng: 55.1390 },
     liveTrackingAvailable: false,
-    distance: '21 km',
-    estimatedTime: '28 min'
+    distance: '35 km',
+    estimatedTime: '32 min'
   },
   {
     id: '4',
-    startLocation: 'Embarcadero Station',
-    endLocation: 'AT&T Park',
-    startCoords: { lat: 37.7929, lng: -122.3968 },
-    endCoords: { lat: 37.7786, lng: -122.3893 },
+    startLocation: 'Dubai Marina',
+    endLocation: 'Jumeirah Beach',
+    startCoords: { lat: 25.0804, lng: 55.1398 },
+    endCoords: { lat: 25.2321, lng: 55.2709 },
     liveTrackingAvailable: true,
-    distance: '1.8 km',
-    estimatedTime: '6 min'
+    distance: '19.5 km',
+    estimatedTime: '24 min'
   },
   {
     id: '5',
-    startLocation: 'Castro District',
-    endLocation: 'Haight-Ashbury',
-    startCoords: { lat: 37.7609, lng: -122.4350 },
-    endCoords: { lat: 37.7699, lng: -122.4469 },
+    startLocation: 'Deira City Centre',
+    endLocation: 'Gold Souk, Deira',
+    startCoords: { lat: 25.2524, lng: 55.3309 },
+    endCoords: { lat: 25.2701, lng: 55.3001 },
     liveTrackingAvailable: false,
-    distance: '1.5 km',
-    estimatedTime: '5 min'
+    distance: '4.8 km',
+    estimatedTime: '12 min'
   }
 ];
 

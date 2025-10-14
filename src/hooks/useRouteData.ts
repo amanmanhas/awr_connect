@@ -18,9 +18,9 @@ export const useRouteData = (routeInfo: RouteCoordinates | null) => {
       setError(null);
       
       try {
-        // Use provided route coordinates or fallback to default
-        const start = routeInfo?.startCoords || { lat: 37.7647, lng: -122.4192 };
-        const end = routeInfo?.endCoords || { lat: 37.7757, lng: -122.4194 };
+        // Use provided route coordinates or fallback to default (Dubai)
+        const start = routeInfo?.startCoords || { lat: 25.1879, lng: 55.2744 }; // AWR Office
+        const end = routeInfo?.endCoords || { lat: 25.1972, lng: 55.2744 }; // Burj Khalifa
 
         const route = await routeService.fetchRoute(
           start.lat, 

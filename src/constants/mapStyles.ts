@@ -1,19 +1,11 @@
 export const customMapStyle = [
   {
-    featureType: 'road',
-    elementType: 'geometry',
-    stylers: [
-      { visibility: 'simplified' },
-      { color: '#f0f0f0' }
-    ]
-  },
-  {
     featureType: 'road.arterial',
     stylers: [{ visibility: 'simplified' }]
   },
   {
     featureType: 'road.local',
-    stylers: [{ visibility: 'off' }]
+    stylers: [{ visibility: 'on' }]
   },
   {
     featureType: 'poi',
@@ -21,13 +13,13 @@ export const customMapStyle = [
   },
   {
     featureType: 'transit',
-    stylers: [{ visibility: 'off' }]
+    stylers: [{ visibility: 'on' }]
   }
 ];
 
 export const DEFAULT_MAP_REGION = {
-  latitude: 37.7647,
-  longitude: -122.4192,
+  latitude: 25.1879, // Dubai - AWR Office (Business Bay)
+  longitude: 55.2744,
   latitudeDelta: 0.015,
   longitudeDelta: 0.0121,
 };

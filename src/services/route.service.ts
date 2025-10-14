@@ -3,38 +3,25 @@ import { API_CONFIG } from '../config/api.config';
 import { RoutePoint, RouteResponse } from '../types/route.types';
 import { calculateDistance, calculateBearing } from '../utils/geo.utils';
 
-// Mock route data for fallback
+// Mock route data for fallback - Dubai route from AWR Office to Burj Khalifa
 const mockRoute: RoutePoint[] = [
-  // Mission District to Downtown SF following streets
-  { latitude: 37.7647, longitude: -122.4192, speed: 30, streetName: "Mission St", instruction: "Start at Mission & 16th" },
-  { latitude: 37.7651, longitude: -122.4198, speed: 20, streetName: "16th St", instruction: "Turn right onto 16th St" },
-  { latitude: 37.7652, longitude: -122.4207, speed: 25, streetName: "16th St", instruction: "Continue on 16th St" },
-  { latitude: 37.7653, longitude: -122.4212, speed: 25, streetName: "16th St" },
-  { latitude: 37.7654, longitude: -122.4217, speed: 20, streetName: "16th St", instruction: "Approaching Mission St" },
-  { latitude: 37.7655, longitude: -122.4226, speed: 15, streetName: "16th St" },
-  { latitude: 37.7656, longitude: -122.4231, speed: 10, streetName: "16th St", instruction: "Prepare to turn left" },
-  { latitude: 37.7657, longitude: -122.4236, speed: 15, streetName: "Mission St", instruction: "Turn left onto Mission St" },
-  { latitude: 37.7662, longitude: -122.4235, speed: 25, streetName: "Mission St" },
-  { latitude: 37.7666, longitude: -122.4234, speed: 30, streetName: "Mission St", instruction: "Continue on Mission St" },
-  { latitude: 37.7671, longitude: -122.4233, speed: 30, streetName: "Mission St" },
-  { latitude: 37.7676, longitude: -122.4232, speed: 25, streetName: "Mission St", instruction: "Approaching 14th St" },
-  { latitude: 37.7681, longitude: -122.4231, speed: 30, streetName: "Mission St" },
-  { latitude: 37.7685, longitude: -122.4230, speed: 30, streetName: "Mission St", instruction: "Pass Duboce Ave" },
-  { latitude: 37.7690, longitude: -122.4229, speed: 30, streetName: "Mission St" },
-  { latitude: 37.7694, longitude: -122.4228, speed: 25, streetName: "Mission St", instruction: "Approaching Market St" },
-  { latitude: 37.7699, longitude: -122.4227, speed: 20, streetName: "Mission St" },
-  { latitude: 37.7703, longitude: -122.4226, speed: 15, streetName: "Mission St", instruction: "Prepare to turn right" },
-  { latitude: 37.7712, longitude: -122.4224, speed: 15, streetName: "Market St", instruction: "Turn right onto Market St" },
-  { latitude: 37.7716, longitude: -122.4221, speed: 25, streetName: "Market St" },
-  { latitude: 37.7721, longitude: -122.4218, speed: 30, streetName: "Market St", instruction: "Continue on Market St" },
-  { latitude: 37.7725, longitude: -122.4215, speed: 30, streetName: "Market St" },
-  { latitude: 37.7730, longitude: -122.4212, speed: 25, streetName: "Market St", instruction: "Approaching 8th St" },
-  { latitude: 37.7734, longitude: -122.4209, speed: 30, streetName: "Market St" },
-  { latitude: 37.7739, longitude: -122.4206, speed: 30, streetName: "Market St", instruction: "Pass 7th St" },
-  { latitude: 37.7743, longitude: -122.4203, speed: 25, streetName: "Market St" },
-  { latitude: 37.7748, longitude: -122.4200, speed: 20, streetName: "Market St", instruction: "Approaching destination" },
-  { latitude: 37.7752, longitude: -122.4197, speed: 15, streetName: "Market St" },
-  { latitude: 37.7757, longitude: -122.4194, speed: 10, streetName: "Market St", instruction: "Arriving at Market & 5th" }
+  { latitude: 25.1879, longitude: 55.2744, speed: 30, streetName: "Marasi Dr", instruction: "Start at AWR Office, Business Bay" },
+  { latitude: 25.1885, longitude: 55.2744, speed: 25, streetName: "Marasi Dr", instruction: "Head north on Marasi Dr" },
+  { latitude: 25.1891, longitude: 55.2744, speed: 30, streetName: "Marasi Dr", instruction: "Continue on Marasi Dr" },
+  { latitude: 25.1897, longitude: 55.2744, speed: 30, streetName: "Marasi Dr" },
+  { latitude: 25.1903, longitude: 55.2744, speed: 25, streetName: "Marasi Dr", instruction: "Approaching Al Mustaqbal St" },
+  { latitude: 25.1909, longitude: 55.2744, speed: 20, streetName: "Marasi Dr" },
+  { latitude: 25.1915, longitude: 55.2744, speed: 15, streetName: "Marasi Dr", instruction: "Prepare to turn right" },
+  { latitude: 25.1921, longitude: 55.2744, speed: 20, streetName: "Al Mustaqbal St", instruction: "Turn right onto Al Mustaqbal St" },
+  { latitude: 25.1927, longitude: 55.2744, speed: 25, streetName: "Al Mustaqbal St" },
+  { latitude: 25.1933, longitude: 55.2744, speed: 30, streetName: "Al Mustaqbal St", instruction: "Continue on Al Mustaqbal St" },
+  { latitude: 25.1939, longitude: 55.2744, speed: 30, streetName: "Al Mustaqbal St" },
+  { latitude: 25.1945, longitude: 55.2744, speed: 25, streetName: "Al Mustaqbal St", instruction: "Approaching Financial Centre Rd" },
+  { latitude: 25.1951, longitude: 55.2744, speed: 30, streetName: "Financial Centre Rd" },
+  { latitude: 25.1957, longitude: 55.2744, speed: 30, streetName: "Financial Centre Rd", instruction: "Continue on Financial Centre Rd" },
+  { latitude: 25.1963, longitude: 55.2744, speed: 25, streetName: "Financial Centre Rd" },
+  { latitude: 25.1968, longitude: 55.2744, speed: 20, streetName: "Mohammed Bin Rashid Blvd", instruction: "Approaching Burj Khalifa" },
+  { latitude: 25.1972, longitude: 55.2744, speed: 10, streetName: "Mohammed Bin Rashid Blvd", instruction: "Arriving at Burj Khalifa, Downtown Dubai" }
 ];
 
 
