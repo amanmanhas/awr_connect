@@ -1,4 +1,3 @@
-````markdown
 # AWR Connect - Vehicle Tracking System
 
 A production-ready React Native application for real-time vehicle tracking and route visualization. Built for AWR's vendor-managed vehicle transport operations with enterprise-grade architecture, modular components, and optimized performance.
@@ -559,5 +558,3 @@ This project is proprietary software owned by AWR. All rights reserved.
 ---
 
 **Built with ❤️ for AWR Connect**
-
-````
