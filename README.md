@@ -88,22 +88,6 @@ yarn android
 
 ### iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
 ```sh
 # Using npm
 npm run ios
@@ -116,11 +100,30 @@ If everything is set up correctly, you should see your new app running in the An
 
 This is one way to run your app — you can also build it directly from Android Studio or Xcode.
 
-## Step 3: Modify your app
+## Step 3: Start the Backend Server (Optional)
+
+The app includes a Next.js backend for route API functionality. To run the backend server:
+
+```sh
+# Navigate to backend directory
+cd backend
+
+# Install dependencies (first time only)
+npm install
+
+# Start the development server
+npm run dev
+```
+
+The backend server will start at `http://localhost:3000` and provides the route API endpoint at `/api/route`.
+
+> **Note**: The app includes a mock route fallback system, so the backend is optional for testing purposes. However, for production use with real route data, the backend should be running.
+
+## Step 4: Modify your app
 
 Now that you have successfully run the app, let's make changes!
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
 
 When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
 
