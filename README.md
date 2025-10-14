@@ -38,6 +38,10 @@ AWR Connect enables AWR team members to monitor vendor vehicles in real-time dur
 - **TypeScript** `5.8.3` - Static typing and enhanced IDE support
 - **React** `19.1.1` - UI component library
 
+### Backend
+- **React Native** `14.0.1`
+
+
 ### Maps & Location
 - **react-native-maps** `1.26.14` - Native map rendering (Google Maps)
 - **@mapbox/polyline** `1.2.1` - Polyline encoding/decoding
@@ -99,7 +103,7 @@ If everything is set up correctly, you should see your new app running in the An
 
 This is one way to run your app — you can also build it directly from Android Studio or Xcode.
 
-## Step 3: Start the Backend Server (Optional)
+## Step 3: Start the Backend Server
 
 The app includes a Next.js backend for route API functionality. To run the backend server:
 
